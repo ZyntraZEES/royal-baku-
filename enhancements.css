@@ -1,0 +1,55 @@
+/* Royal Baku customer experience upgrade */
+.rb-utility{position:relative;display:inline-flex;align-items:center;gap:6px;flex:0 0 auto;margin-left:2px;padding:2px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:rgba(255,255,255,.025);}
+.rb-language-label{font-size:8px;text-transform:uppercase;letter-spacing:.12em;color:#77716a;padding-left:8px;white-space:nowrap}.rb-select{appearance:none;border:1px solid rgba(212,175,90,.32);background:var(--gold);color:#111;padding:8px 26px 8px 11px;border-radius:999px;font:800 11px/1.1 inherit;letter-spacing:.06em;cursor:pointer;outline:none;min-width:52px}.rb-utility:focus-within{border-color:rgba(212,175,90,.28);box-shadow:0 0 0 3px rgba(212,175,90,.06)}
+.rb-utility .rb-select option{background:#111;color:#fff}
+.rb-kicker-bar{margin-top:-18px;margin-bottom:10px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.rb-kicker{padding:14px 16px;border:1px solid rgba(212,175,90,.15);border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.02));}
+.rb-kicker b,.rb-kicker span{display:block}.rb-kicker b{font-size:13px}.rb-kicker span{font-size:11px;color:#929292;margin-top:4px}
+.rb-fleet-tools{display:grid;grid-template-columns:1.5fr repeat(4,.8fr);gap:10px;margin:20px 0 12px;padding:14px;border:1px solid rgba(212,175,90,.14);border-radius:22px;background:rgba(255,255,255,.03);backdrop-filter:blur(12px)}
+.rb-fleet-tools .input,.rb-fleet-tools select{width:100%;min-height:44px}
+.rb-filter-label{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8d8d8d;margin:0 0 7px 4px}
+.rb-results-note{font-size:12px;color:#888;margin:10px 2px 20px}.rb-results-note b{color:inherit}
+.rb-no-results{padding:40px 22px;text-align:center;border:1px dashed rgba(212,175,90,.2);border-radius:22px;color:#8d8d8d;display:none;margin-top:14px}
+.rb-pricing-band{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.rb-price-card{padding:18px;border:1px solid rgba(212,175,90,.14);border-radius:20px;background:linear-gradient(145deg,rgba(212,175,90,.08),rgba(255,255,255,.02));}
+.rb-price-card b{font-size:16px}.rb-price-card strong{display:block;font-size:28px;letter-spacing:-.06em;margin-top:8px}.rb-price-card span{display:block;color:#8e8e8e;font-size:11px;margin-top:4px}
+.rb-feature-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.rb-feature-pill{padding:15px 16px;border-radius:18px;border:1px solid rgba(212,175,90,.12);background:rgba(255,255,255,.025)}
+.rb-feature-pill i{font-size:15px}.rb-feature-pill b{display:block;margin-top:8px;font-size:13px}.rb-feature-pill span{display:block;margin-top:4px;color:#8d8d8d;font-size:11px;line-height:1.5}
+.rb-tour-itinerary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}.rb-tour-stop{padding:14px;border-radius:16px;border:1px solid rgba(212,175,90,.12);background:rgba(255,255,255,.025)}.rb-tour-stop small{color:#8e8e8e;display:block}.rb-tour-stop b{display:block;margin-top:5px;font-size:13px}
+.rb-book-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}.rb-book-step{padding:12px 14px;border-radius:16px;border:1px solid rgba(212,175,90,.12);background:rgba(255,255,255,.02)}.rb-book-step b{font-size:11px;letter-spacing:.1em}.rb-book-step span{display:block;color:#8d8d8d;font-size:11px;margin-top:4px}.rb-book-step.active{border-color:rgba(212,175,90,.38);box-shadow:0 0 0 1px rgba(212,175,90,.08) inset}
+.rb-extras{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.rb-extra{display:flex;align-items:flex-start;gap:10px;padding:14px;border:1px solid rgba(212,175,90,.12);border-radius:18px;background:rgba(255,255,255,.02);cursor:pointer}.rb-extra input{margin-top:3px;accent-color:#d4af5a}.rb-extra b{display:block;font-size:12px}.rb-extra span{display:block;color:#8d8d8d;font-size:10px;margin-top:3px}
+.rb-plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.rb-plan{padding:14px;border:1px solid rgba(212,175,90,.12);border-radius:18px;cursor:pointer}.rb-plan input{accent-color:#d4af5a}.rb-plan b{display:block;margin-top:7px}.rb-plan span{display:block;color:#8d8d8d;font-size:10px;margin-top:3px}.rb-plan.active{border-color:rgba(212,175,90,.4)}
+.rb-toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:1200;padding:12px 16px;border-radius:999px;background:#111;color:#fff;border:1px solid rgba(212,175,90,.3);box-shadow:0 15px 45px rgba(0,0,0,.35);font-size:12px;transition:.28s ease}.rb-toast.show{opacity:1;transform:translate(-50%,0)}
+.rb-mobile-book{display:none}
+@media(max-width:980px){.rb-utility{display:none}.rb-kicker-bar,.rb-feature-row{grid-template-columns:repeat(2,1fr)}.rb-fleet-tools{grid-template-columns:1fr 1fr}.rb-pricing-band{grid-template-columns:1fr}.rb-tour-itinerary{grid-template-columns:1fr}.rb-extras,.rb-plan-grid{grid-template-columns:1fr}.rb-book-steps{grid-template-columns:1fr}.rb-fleet-tools .rb-tool-search{grid-column:1/-1}}
+@media(max-width:640px){.rb-utility{display:none}.rb-kicker-bar,.rb-feature-row{grid-template-columns:1fr}.rb-fleet-tools{grid-template-columns:1fr;padding:11px}.rb-fleet-tools .rb-tool-search{grid-column:auto}.rb-select{font-size:10px}.rb-mobile-book{display:block;margin-top:10px}.rb-results-note{line-height:1.5}}
+
+/* Navigation polish: language stays beside Book Now, never on top of it. */
+@media(min-width:981px){
+  .nav{gap:12px;}
+  .nav-links{flex:1;min-width:0;justify-content:flex-end;gap:4px;white-space:nowrap;}
+  .nav-links a{padding:9px 10px;}
+  .nav-links .nav-cta{margin-left:2px;padding-inline:14px;}
+  .rb-language-label{display:none;}
+}
+.mobile-language{display:none;align-items:center;justify-content:space-between;gap:14px;padding:10px 12px;border:1px solid rgba(255,255,255,.07);border-radius:14px;background:rgba(255,255,255,.025);color:#77716a;font-size:11px;}
+.mobile-language .rb-select{min-width:58px;padding:9px 24px 9px 12px;}
+@media(max-width:980px){
+  .mobile-language{display:flex;}
+}
+.rb-availability-note{margin-top:12px;padding:12px 14px;border-radius:12px;font-size:.9rem;border:1px solid rgba(255,255,255,.1);opacity:.78}.rb-availability-note.is-open{background:rgba(255,255,255,.03)}.rb-availability-note.is-blocked{border-color:rgba(220,80,80,.45);background:rgba(220,80,80,.08);opacity:1}.rb-booking-extras .booking-options{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:800px){.rb-booking-extras .booking-options{grid-template-columns:1fr}}
+
+
+/* ========================= PAGE-SPECIFIC CINEMATIC BACKGROUNDS ========================= */
+.page-hero{position:relative;isolation:isolate;overflow:hidden}
+.page-hero::before{content:"";position:absolute;inset:0;z-index:-2;background-position:center;background-size:cover;background-repeat:no-repeat;transform:scale(1.02);filter:saturate(.92) contrast(1.04);opacity:.74}
+.page-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,5,5,.88) 0%,rgba(5,5,5,.66) 35%,rgba(5,5,5,.24) 68%,rgba(5,5,5,.62) 100%),linear-gradient(0deg,#050505 0%,rgba(5,5,5,.08) 38%,rgba(5,5,5,.64) 100%)}
+.page-hero .container{position:relative;z-index:2}
+.page-services .page-hero::before{background-image:url('https://images.pexels.com/photos/12929062/pexels-photo-12929062.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+.page-tours .page-hero::before{background-image:url('https://c.regencyholidays.com/packages/15ff69a1-724d-4403-a76d-a1ab249125fc/original/e4142a13-5c2d-47f9-975e-268cd73004ad.webp')}
+.page-contact .page-hero::before{background-image:url('https://www.advantour.com/img/azarbaijan/tours/baku-tours.jpg')}
+.page-booking .page-hero::before{background-image:url('https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+.page-tour-booking .page-hero::before{background-image:url('https://assets.bucketlistly.blog/sites/5adf778b6eabcc00190b75b1/content_entry5b155bed5711a8176e9f9783/5dd4e420400aef000ca93b68/files/azerbaijan-laza-travel-photo-20191119135831406-main-image.jpg')}
+.page-confirmation .page-hero::before{background-image:url('https://images.pexels.com/photos/31617733/pexels-photo-31617733.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+@media(max-width:640px){.page-hero::before{opacity:.58}.page-hero::after{background:linear-gradient(180deg,rgba(5,5,5,.72),rgba(5,5,5,.42) 52%,rgba(5,5,5,.9) 100%)}}

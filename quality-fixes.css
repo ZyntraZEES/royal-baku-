@@ -1,0 +1,114 @@
+/* Royal Baku — final cross-device QA layer */
+html,body{min-width:0}
+body{overflow-x:hidden;-webkit-text-size-adjust:100%}
+*,*::before,*::after{min-width:0}
+img{height:auto}
+button,a,input,select,textarea{touch-action:manipulation}
+:focus-visible{outline:2px solid rgba(242,209,122,.85);outline-offset:3px}
+
+/* Header: compact desktop, predictable mobile drawer */
+.nav{isolation:isolate}
+.nav-links{min-width:0}
+.rb-utility{z-index:2}
+.rb-select{min-height:38px}
+.mobile-menu{overscroll-behavior:contain}
+.menu-open{overflow:hidden}
+
+/* Pages and cards */
+.page-hero,.booking-page,.confirm-wrap{min-width:0}
+.page-hero .display{max-width:100%;overflow-wrap:anywhere}
+.lede{overflow-wrap:anywhere}
+.fleet-grid,.cards,.tour-grid,.grid-6,.contact-grid,.booking-layout,.showcase{min-width:0}
+.fleet-card,.card,.tour,.service-card,.contact-panel,.map-card,.booking-form-card,.booking-visual{min-width:0}
+.fleet-card-top,.card-meta,.booking-visual-overlay,.admin-card-head{min-width:0}
+.price-badge,.soft-badge,.chip{white-space:normal}
+
+/* Remote image resilience: keep the media area elegant if a remote CDN fails */
+.has-img-fallback .img-fallback{visibility:hidden}
+.has-img-fallback{background:
+  radial-gradient(circle at 50% 35%,rgba(212,175,90,.08),transparent 38%),
+  linear-gradient(145deg,#171717,#090909)}
+.has-img-fallback::after{content:'ROYAL BAKU';position:absolute;inset:0;display:grid;place-items:center;color:rgba(242,209,122,.42);font-size:12px;font-weight:800;letter-spacing:.24em}
+
+/* Booking: one-column fields on narrow tablets too */
+@media (max-width:900px){
+  .rb-fleet-tools{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .booking-layout{grid-template-columns:1fr}
+  .booking-visual{position:relative;top:auto}
+  .admin-header-right{margin-left:auto}
+}
+@media (max-width:640px){
+  .nav{top:8px}
+  .brand span{max-width:42vw}
+  .mobile-menu-inner{padding-bottom:24px}
+  .rb-fleet-tools{grid-template-columns:1fr}
+  .booking-layout{gap:14px}
+  .booking-visual-media{height:280px}
+  .form-row,.booking-options,.spec-grid,.vehicle-specs{grid-template-columns:1fr}
+  .booking-form-card{border-radius:22px}
+  .booking-form .btn{width:100%;justify-content:center}
+  .confirm-wrap{padding-inline:12px}
+  .confirm-card{width:100%;border-radius:22px}
+}
+@media (max-width:420px){
+  .container{width:calc(100% - 18px)}
+  .nav{width:calc(100% - 14px);left:7px}
+  .brand span{max-width:36vw}
+  .mobile-menu-inner{top:72px}
+  .hero-actions .btn{width:100%}
+  .rb-page-loader .rb-loader-content{width:90vw}
+  .rb-loader-logo-wrap{width:138px;height:138px}
+  .rb-loader-logo{width:108px;height:108px}
+  .rb-loader-pulse{width:126px;height:126px}
+}
+
+/* Admin desktop/tablet/mobile */
+.admin-dashboard-page,.admin-app-shell,.admin-main,.admin-content{min-width:0}
+.admin-content{overflow-x:hidden}
+.admin-search input{min-width:0}
+.admin-modal-card{-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.admin-modal-card form{min-width:0}
+.admin-editor-field input,.admin-editor-field textarea,.admin-editor-field select{min-width:0}
+.manage-actions .btn{min-height:40px}
+@media(max-width:1100px){
+  .admin-app-shell{grid-template-columns:220px minmax(0,1fr)}
+  .admin-content{padding:26px 22px}
+  .admin-header{padding-inline:22px}
+  .admin-search{width:240px}
+}
+@media(max-width:820px){
+  body.admin-page.menu-open{overflow:hidden}
+  .admin-header-right .admin-user-menu{padding-left:0;border-left:0}
+  .admin-sidebar{z-index:100}
+  .admin-main{min-width:0}
+}
+@media(max-width:560px){
+  .admin-content{padding:16px 12px}
+  .admin-header{padding:12px 13px}
+  .admin-header h1{font-size:20px}
+  .admin-date{font-size:9px}
+  .admin-user-menu{display:none}
+  .admin-kpi-grid{grid-template-columns:1fr 1fr}
+  .admin-card{min-width:0}
+  .admin-card-head{align-items:flex-start;flex-wrap:wrap}
+  .manage-actions{display:grid;grid-template-columns:1fr 1fr}
+  .manage-actions .danger-link{grid-column:1/-1;text-align:left;padding-left:4px}
+  .admin-modal{padding:7px}
+  .admin-modal-card{max-height:94vh;padding:16px;border-radius:18px}
+  .admin-modal-head h2{font-size:27px}
+  .editor-actions{position:sticky;bottom:0;background:#0e0e0e;padding-bottom:2px}
+  .editor-actions .btn{flex:1;justify-content:center}
+}
+@media(max-width:380px){
+  .admin-kpi-grid{grid-template-columns:1fr}
+  .manage-actions{grid-template-columns:1fr}
+  .manage-actions .danger-link{grid-column:auto}
+}
+
+/* The page loader is a branded intro, not a blocking dependency. */
+.rb-page-loader{will-change:opacity}
+.rb-loader-logo{width:118px;height:118px;border-radius:50%}
+@media(max-width:420px){.rb-loader-logo{width:108px;height:108px}}
+.inquiry-list{padding:0 20px 10px}.inquiry-item{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.06)}.inquiry-item:last-child{border-bottom:0}.inquiry-item h4{margin:7px 0;font-size:16px}.inquiry-item p{margin:0 0 8px;color:#8e8981;line-height:1.6;font-size:12px;max-width:760px}.inquiry-item small{color:#625e57;font-size:9px}.inquiry-item .row-actions{align-self:center}
+#adminMobileOverlay{display:none;position:fixed;inset:0;z-index:90;border:0;background:rgba(0,0,0,.58);backdrop-filter:blur(3px)}#adminMobileOverlay.show{display:block}
+@media(max-width:820px){.admin-mobile-open{overflow:hidden}.inquiry-item{flex-direction:column;gap:12px}.inquiry-item .row-actions{align-self:flex-start}}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050505"><title>Royal Baku — Admin Dashboard</title>
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="quality-fixes.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script src="rb-data.js"></script></head>
+<body class="admin-page">
+<div class="site-bg"></div><div class="grain"></div>
+<section id="adminApp" class="admin-dashboard-page">
+  <div class="admin-app-shell">
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="admin-sidebar-head">
+        <a href="index.html" class="admin-logo-lockup"><img src="assets/royal-baku-logo.png" alt="Royal Baku"><div><strong>ROYAL BAKU</strong><span>OPERATIONS</span></div></a>
+        <button class="admin-close-mobile" id="closeSidebar" type="button" aria-label="Close menu">×</button>
+      </div>
+      <div class="admin-sidebar-label">Workspace</div>
+      <nav class="admin-nav" aria-label="Admin navigation">
+        <button class="active" data-admin-tab="overview"><span class="nav-icon">⌂</span><span>Overview</span></button>
+        <button data-admin-tab="bookings"><span class="nav-icon">▤</span><span>Bookings</span><b id="navPendingBadge" class="nav-badge">0</b></button>
+        <button data-admin-tab="fleet"><span class="nav-icon">◫</span><span>Fleet</span></button>
+        <button data-admin-tab="tours"><span class="nav-icon">◎</span><span>Tours</span></button>
+        <button data-admin-tab="customers"><span class="nav-icon">◌</span><span>Customers</span></button><button data-admin-tab="inquiries"><span class="nav-icon">✉</span><span>Inquiries</span><b id="navInquiryBadge" class="nav-badge">0</b></button>
+        <button data-admin-tab="reviews"><span class="nav-icon">★</span><span>Reviews</span></button>
+        <button data-admin-tab="faqs"><span class="nav-icon">?</span><span>FAQs</span></button>
+        <button data-admin-tab="content"><span class="nav-icon">✎</span><span>Content & Pricing</span></button>
+        <button data-admin-tab="settings"><span class="nav-icon">⚙</span><span>Settings</span></button>
+      </nav>
+      <div class="admin-sidebar-footer">
+        <div class="sidebar-status"><i></i><span>System online</span></div>
+        <div class="sidebar-actions"><a href="index.html">View website</a><button id="logoutAdmin" type="button">Log out</button></div>
+      </div>
+    </aside>
+    <div class="admin-main">
+      <header class="admin-header">
+        <div class="admin-header-left"><button class="admin-menu-mobile" id="openSidebar" type="button" aria-label="Open menu">☰</button><div><span class="admin-date" id="adminDate"></span><h1 id="pageTitle">Overview</h1></div></div>
+        <div class="admin-header-right"><div class="admin-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search bookings or customers..." aria-label="Search"></div><div class="admin-user-menu"><div class="avatar">A</div><div><strong>Administrator</strong><span>Royal Baku Operations</span></div></div></div>
+      </header>
+      <main class="admin-content">
+        <section id="tab-overview" class="admin-tab-panel"></section>
+        <section id="tab-bookings" class="admin-tab-panel" hidden></section>
+        <section id="tab-fleet" class="admin-tab-panel" hidden></section>
+        <section id="tab-tours" class="admin-tab-panel" hidden></section>
+        <section id="tab-customers" class="admin-tab-panel" hidden></section><section id="tab-inquiries" class="admin-tab-panel" hidden></section>
+        <section id="tab-reviews" class="admin-tab-panel" hidden></section>
+        <section id="tab-faqs" class="admin-tab-panel" hidden></section>
+        <section id="tab-content" class="admin-tab-panel" hidden></section>
+        <section id="tab-settings" class="admin-tab-panel" hidden></section>
+      </main>
+    </div>
+  </div>
+</section>
+<script src="admin.js"></script>
+<script src="quality-fixes.js"></script></body></html>

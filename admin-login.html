@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050505"><title>Royal Baku — Admin Login</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="quality-fixes.css"><link rel="stylesheet" href="admin-login-premium.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script src="rb-data.js"></script></head>
+<body class="admin-page auth-redesign">
+<div class="site-bg"></div><div class="grain"></div>
+<section class="admin-auth-screen" aria-label="Admin login">
+  <div class="auth-backdrop"></div>
+  <div class="admin-auth-shell">
+    <div class="admin-auth-showcase">
+      <a class="admin-auth-brand" href="index.html"><img src="assets/royal-baku-logo.png" alt="Royal Baku logo"><span>ROYAL BAKU</span></a>
+      <div class="auth-showcase-copy"><span class="eyebrow">Private operations workspace</span><h1>Run the fleet.<br><span>Own the experience.</span></h1><p>Manage rental requests, fleet availability, tours, customers and operational reporting from one secure dashboard.</p></div>
+      <div class="auth-feature-row"><div><strong>01</strong><span>Live requests</span></div><div><strong>02</strong><span>Fleet control</span></div><div><strong>03</strong><span>Tour desk</span></div></div>
+      <div class="auth-footer-note">Royal Baku Car Rental &amp; Tourism · Baku, Azerbaijan</div>
+    </div>
+    <div class="admin-auth-card">
+      <div class="auth-kicker">Secure administrator access</div><h2>Welcome back.</h2><p class="auth-lead">Sign in to continue to the Royal Baku operations dashboard.</p>
+      <form id="loginForm" class="admin-login-form" novalidate>
+        <div id="adminLoginError" class="admin-error" role="alert">Incorrect username or password.</div>
+        <label class="admin-field"><i class="fa-solid fa-user" aria-hidden="true"></i><input class="input" id="adminUsername" name="username" type="text" autocomplete="username" placeholder=" " aria-label="Username" required><span>Username</span></label>
+        <label class="admin-field"><i class="fa-solid fa-lock" aria-hidden="true"></i><div class="admin-input-wrap"><input class="input" id="adminPassword" name="password" type="password" autocomplete="current-password" placeholder=" " aria-label="Password" required><button class="password-toggle" id="togglePassword" type="button" aria-label="Show password"><i class="fa-regular fa-eye" aria-hidden="true"></i><span class="toggle-text">Show</span></button><span>Password</span></div></label>
+        <div class="auth-meta-row"><label><input id="rememberAdmin" type="checkbox"> <span>Remember this device</span></label><span class="secure-mini"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Secure workspace</span></div>
+        <button class="btn btn-primary auth-submit" id="loginSubmit" type="submit"><span class="submit-label">Sign in to dashboard</span><span class="submit-icon">↗</span><span class="spinner" aria-hidden="true"></span></button>
+        <div class="auth-demo-note"><b>Demo access</b><br>Username: <code>admin</code> · Password: <code>RB2026</code></div>
+        <div class="auth-security-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Secure Admin Access</div>
+      </form>
+    </div>
+  </div>
+</section>
+<script src="admin-login.js"></script><script src="quality-fixes.js"></script></body></html>
